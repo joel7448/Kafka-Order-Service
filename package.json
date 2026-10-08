@@ -1,0 +1,15 @@
+{
+  "name": "kafka",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "produce": "node src/producer/publisher.js",
+    "worker:main": "node src/workers/mainWorker.js",
+    "worker:retry": "node src/workers/retryWorker.js",
+    "worker:dlq": "node src/workers/dlqWorker.js",
+    "dlq:replay": "node src/cli/replayDlq.js"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  }
+}
